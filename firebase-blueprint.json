@@ -1,0 +1,61 @@
+{
+  "entities": {
+    "User": {
+      "title": "User Profile",
+      "description": "Represents a community member user profile",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "memberId": { "type": "string" },
+        "username": { "type": "string" },
+        "fullName": { "type": "string" },
+        "email": { "type": "string" },
+        "role": { "type": "string" },
+        "status": { "type": "string" },
+        "profilePicture": { "type": "string" },
+        "bio": { "type": "string" },
+        "phone": { "type": "string" },
+        "registrationDate": { "type": "string" },
+        "outstandingBalance": { "type": "number" },
+        "totalContributed": { "type": "number" }
+      },
+      "required": ["id", "username", "fullName", "email", "role", "status"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "Collection of user profiles in the community network"
+    },
+    "/posts/{postId}": {
+      "description": "Community feed posts, likes, and comments"
+    },
+    "/polls/{pollId}": {
+      "description": "Community preference polls and votes"
+    },
+    "/gallery/{itemId}": {
+      "description": "Community historical records and uploaded photo gallery"
+    },
+    "/marketplace/{itemId}": {
+      "description": "Local neighborhood marketplace buy/sell listings"
+    },
+    "/events/{eventId}": {
+      "description": "Community activities and cleanup events with RSVPs"
+    },
+    "/projects/{projectId}": {
+      "description": "Infrastructure construction and road work project tracking"
+    },
+    "/payments/{paymentId}": {
+      "description": "Dues logging and annual financial contributions"
+    },
+    "/conversations/{conversationId}": {
+      "description": "Direct chat sessions"
+    },
+    "/messages/{messageId}": {
+      "description": "Chat messages between neighbors"
+    },
+    "/notifications/{notificationId}": {
+      "description": "Activity alerts and notifications"
+    }
+  }
+}

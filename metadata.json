@@ -1,0 +1,6 @@
+{
+  "name": "Maretraite Project Network",
+  "description": "A Facebook-inspired digital platform for the Maretraite community to connect, share-updates, text/image notifications, plan events, document ongoing construction and infrastructure projects, and manage community finances with full payment tracking and reports.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
